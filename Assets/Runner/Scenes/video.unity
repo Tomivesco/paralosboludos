@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo_start: 0
-  tiempo_end: 74
+  tiempo_end: 13
 --- !u!1 &1278414066
 GameObject:
   m_ObjectHideFlags: 0
