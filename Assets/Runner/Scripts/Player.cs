@@ -82,52 +82,6 @@ public class Player : MonoBehaviour
 
 
 
-        /*  if (carriles)
-          {
-              float playerPosition = transform.position.x;
-
-              if (Input.GetKeyDown(KeyCode.D))
-              {
-                  if (playerPosition < posCarriles[2])
-                  {
-                      transform.Translate(movementDistance, 0, 0);
-                  }
-              }
-
-
-
-
-
-
-
-            else if (Input.GetKeyDown(KeyCode.S)) 
-            {
-
-                if (playerPosition < posCarriles[2])
-                {
-                    transform.Translate(movementDistance, 0, 0);
-                }
-               
-            }
-
-
-
-
-
-
-            else if (Input.GetKeyDown(KeyCode.A))
-              {
-                  if (playerPosition > posCarriles[0])
-                  {
-                      transform.Translate(-movementDistance, 0, 0);
-                  }
-
-              }
-          }*/
-
-
-
-
 
 
         if (carriles)

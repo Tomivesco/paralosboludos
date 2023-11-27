@@ -107,8 +107,14 @@ public class SpawnManager : MonoBehaviour
 
         if (isValid && (activeEnemies.Count > 0))
         {
-            for (int i = 0; i < activeEnemies.Count; i++)
+            for (int i = activeEnemies.Count - 1; i >= 0; i--)
             {
+                if (activeEnemies[i] == null) // Verifica si el objeto ha sido destruido
+                {
+                    activeEnemies.RemoveAt(i); // Elimina el objeto destruido de la lista
+                    continue;
+                }
+
                 if (Vector3.Distance(activeEnemies[i].transform.position, enemyPosition) < minDistance)
                 {
                     isValid = false;
