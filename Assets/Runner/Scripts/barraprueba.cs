@@ -2,48 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class barraprueba : MonoBehaviour
-
-{
-    [SerializeField] Transform Player;
-    [SerializeField] Transform endline;
-    [SerializeField] Slider slider;
-
-    float maxDistance;
+{ 
+    public Slider progressBar;
+    public float tiempoTotal = 5f; // Tiempo total en segundos
 
     private void Start()
     {
-        maxDistance = getDistance();
+        // Llama a la función para iniciar la barra de progreso
+        IniciarProgreso();
     }
 
-    private void Update()
+    private void IniciarProgreso()
     {
-        // if (Player.position.y <= maxDistance && Player.position.y <= endline.position.y)
-        if (Player.position.y <= endline.position.y)
+        // Resetea el valor de la barra de progreso al inicio
+        progressBar.value = 0;
+
+        // Llama a la función de actualización de la barra de progreso
+        InvokeRepeating("ActualizarProgreso", 0, tiempoTotal / 100);
+    }
+
+    private void ActualizarProgreso()
+    {
+        // Incrementa el valor de la barra de progreso
+        progressBar.value++;
+
+        // Si la barra de progreso alcanza el valor máximo, detén la actualización
+        if (progressBar.value >= progressBar.maxValue)
         {
-            float distance = 1 - (getDistance() / maxDistance);
-            setProgress(distance);
+            CancelInvoke("ActualizarProgreso");
         }
     }
-
-    float getDistance()
-    {
-        return Vector3.Distance(Player.position, endline.position);
-    }
-
-    void setProgress(float p)
-    {
-        slider.value = p;
-    }
-
 }
 
 
-   
 
 
-    
+
+
+
+
+
 
 
 

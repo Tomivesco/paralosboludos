@@ -15,6 +15,9 @@ public class generador : MonoBehaviour
     public alertadesactivada a;
     public alertadesactivada1 b;
     public alertadesactivada2 c;
+    public MovimientoEnemigo d;
+    public float tiempocorriendo1 = 0;
+
 
     void Start()
     {
@@ -22,16 +25,22 @@ public class generador : MonoBehaviour
         a = FindObjectOfType<alertadesactivada>();
         b = FindObjectOfType<alertadesactivada1>();
         c = FindObjectOfType<alertadesactivada2>();
+        d = FindObjectOfType<MovimientoEnemigo>();
     }
 
     void Update()
+
     {
+        tiempocorriendo1 = Time.time;
+
         if (Time.time - tiempoUltimaGeneracion > tiempoEntreGeneracion)
         {
             GenerarEnemigo();
             tiempoUltimaGeneracion = Time.time;
 
         }
+
+        aumentoVelocidad();
     }
 
     void GenerarEnemigo()
@@ -59,5 +68,13 @@ public class generador : MonoBehaviour
         }
 
         Instantiate(enemigoPrefab, posicionGeneracion, rotacion);
+    }
+
+    void aumentoVelocidad()
+    {
+        if (tiempocorriendo1 >= 10)
+        {
+            d.velocidad = 80;
+        }
     }
 }
