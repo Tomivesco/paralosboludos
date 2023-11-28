@@ -50,7 +50,9 @@ public class MovimientoEnemigo : MonoBehaviour
             }
              }
     }
-     private void destroyMe()
+ 
+
+private void destroyMe()
      {
          if (SpawnManager.activeEnemies.Count > 0)
          {

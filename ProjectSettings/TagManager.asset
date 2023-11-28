@@ -14,6 +14,7 @@ TagManager:
   - NutriaGanadora
   - lineaDelJugador
   - meta
+  - choquerayo
   layers:
   - Default
   - TransparentFX
