@@ -9,18 +9,18 @@ public class MovimientoEnemigo : MonoBehaviour
     public float velocidad = 5.0f; // Velocidad de movimiento del enemigo.
     public Transform carril; // El carril en el que se moverá el enemigo.
 
-    
+
     public Transform lineaDelJugador; // Referencia al objeto que representa la línea del jugador.
 
-  
+
 
     void Update()
     {
-        
-            // Mover el enemigo hacia adelante en el carril.
-            transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
-            
-  }
+
+        // Mover el enemigo hacia adelante en el carril.
+        transform.Translate(Vector3.forward * velocidad * Time.deltaTime);
+
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -40,39 +40,38 @@ public class MovimientoEnemigo : MonoBehaviour
 
             if (life <= 0)
             {
-               
+
                 Destroy(gameObject);
             }
             if (other.CompareTag("lineaDelJugador")) // Asegúrate de que el tag coincida con los enemigos
             {
-                
+
                 Destroy(gameObject); // Elimina el enemigo cuando colisiona con el collider del jugador.
             }
-             }
+        }
+        if (other.gameObject.tag == "chocar")
+        {
+            Destroy(gameObject);
+        }
     }
- 
+    private void destroyMe()
+    {
+        if (SpawnManager.activeEnemies.Count > 0)
+        {
+            for (int i = 0; i < SpawnManager.activeEnemies.Count; i++)
+            {
+                if (SpawnManager.activeEnemies[i].transform.position == this.gameObject.transform.position)
+                {
+                    SpawnManager.activeEnemies.Remove(SpawnManager.activeEnemies[i]);
+                    Destroy(this.gameObject);
+                    break;
 
-private void destroyMe()
-     {
-         if (SpawnManager.activeEnemies.Count > 0)
-         {
-             for (int i = 0; i < SpawnManager.activeEnemies.Count; i++)
-             {
-                 if (SpawnManager.activeEnemies[i].transform.position == this.gameObject.transform.position)
-                 {
-                     SpawnManager.activeEnemies.Remove(SpawnManager.activeEnemies[i]);
-                     Destroy(this.gameObject);
-                     break;
-                    
 
                 }
-             }
+            }
 
-         }
-     }
-
-     
- 
+        }
     }
 
 
+}

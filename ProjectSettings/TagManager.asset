@@ -15,6 +15,7 @@ TagManager:
   - lineaDelJugador
   - meta
   - choquerayo
+  - chocar
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Water
   - UI
   - TT
-  - 
+  - rayo
   - 
   - 
   - 
