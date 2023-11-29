@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8d8d609e0b274ba4093e38ce3c6ffe81
+guid: 0b804e86be6c1eb4ea31c91869672518
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,43 +123,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gordo corriendo_0
+      name: sprite_peluk_grande_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 750
-        height: 720
-      alignment: 9
-      pivot: {x: 0.6544577, y: 0.48537323}
+        y: 9
+        width: 456
+        height: 711
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5e99d7e943c5c14fbafdd281c4c106f
-      internalID: 1781469058
+      spriteID: f39ecc0cfedc10a4290260c801b11ba8
+      internalID: 787182134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gordo corriendo_1
+      name: sprite_peluk_grande_1
       rect:
         serializedVersion: 2
-        x: 1500
-        y: 0
-        width: 750
-        height: 720
-      alignment: 9
-      pivot: {x: 0.4578755, y: 0.49999988}
+        x: 516
+        y: 13
+        width: 520
+        height: 707
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f1af0d8861588147999f2c6109930b6
-      internalID: -1113746929
+      spriteID: 09cdeab25c3156f45a21a1beeb5d345d
+      internalID: 815895962
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 97cab7ffbf98f43419b8c75cccd13e02
+    spriteID: 8ccd496734fa6d643bb7e33a74656d9f
     internalID: 0
     vertices: []
     indices: 
@@ -175,8 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      gordo corriendo_0: 1781469058
-      gordo corriendo_1: -1113746929
+      sprite_peluk_grande_0: 787182134
+      sprite_peluk_grande_1: 815895962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
