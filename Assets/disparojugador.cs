@@ -15,7 +15,9 @@ public class disparojugador : MonoBehaviour
         {
             disparar();
         }
+         
     }
+
 
     private void disparar()
     {
