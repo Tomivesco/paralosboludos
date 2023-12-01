@@ -19,6 +19,6 @@ public class bottonPerdiste : MonoBehaviour
 
     public void EscenaJuego()
     {
-        SceneManager.LoadScene("Runner3D");
+        SceneManager.LoadScene("inicio");
     }
 }
